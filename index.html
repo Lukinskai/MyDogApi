@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyDogAPI App</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./files/icons/lab1.png"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <header class="header">
+        <div class="header__logo">
+          <img
+            src="./images/chih.jpg"
+            alt="dog's picture"
+            width="300"
+            height="300"
+          />
+          <h1>What's your favorite dog?&nbsp;</h1>
+        </div>
+        <div class="header__switch-model">
+          <label for="images"
+            ><input
+              type="radio"
+              id="images"
+              name="model"
+              value="images"
+              checked
+            />Dogs images</label
+          >
+          <label for="breeds"
+            ><input type="radio" id="breeds" name="model" value="breeds" />Dog
+            breeds</label>
+            <label for="vote"
+            ><input type="radio" id="vote" name="model" value="vote" />Vote for the dog</label>
+        </div>
+      </header>
+
+      <main>
+        <section class="images">
+          <!-- <h2>Dogs Images</h2> -->
+          <h3> I loveeee dogs:)! </h3>
+          <div class="section__container">
+
+          </div>
+        </section>
+        <section class="breeds">
+          <h2>Dog Breeds</h2>
+          <h3>You can find dog breeds here!</h3>
+          <div class="section__container">
+            
+          </div>
+        </section>
+        <section class="vote">
+          <!-- <h2>Vote on a dog</h2> -->
+          <h3>Yuo can vote here!</h3>
+          <!-- <div class="section__container"> -->
+            <div id="vote-options" class="vote-options">
+              <button onClick="vote(1)">Vote Up </button>
+              <button onClick="vote(-1)">Vote Down </button>
+              <!-- <button onClick="showHistoricVotes()">History </button> -->
+                
+            <div>
+              <img id="image-to-vote-on" class="col-lg"></img>
+              </div>
+              
+              </div>
+            
+              <div id="vote-results"  class="vote-results">
+              <button onClick="showVoteOptions()">Show Vote Options</button>
+                <div id="grid" class="imgrid"></div>
+             </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
