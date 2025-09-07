@@ -285,7 +285,7 @@ function showVoteOptions()
 function showImageToVoteOn()
 {
   
-  const url = `${API_URL}images/search`;
+  const url = `${API_URL}/images/search`;
 
   fetch(url,{headers: {
     'x-api-key': API_KEY
