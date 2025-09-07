@@ -9,7 +9,7 @@ You can enjoy funny pictures of dogs, learn about them (dog breeds section) and 
 
 For this project I used this documentation: https://docs.thedogapi.com/
 
-Here is the link for the updated project:
+Here is the link for the updated project: https://mydogapi-vl.netlify.app/
 
 Enjoy :)
 
