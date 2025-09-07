@@ -13,15 +13,15 @@ modelToSectionMap.set("vote", voteSection);
 const modelToEndpointMap = new Map();
 // modelToEndpointMap.set(
 //   "images",
-//   "/images/search?limit=30&breed_ids=beng,kora,birm,tonk,sibe,sing,norw,nebe,jbob,mala&"
+//   "/images/search?limit=10&breed_ids=beng,kora,birm,tonk,sibe,sing,norw,nebe,jbob,mala&"
 // );
 //modelToEndpointMap.set('images', '/images/search?limit=10&breed_ids&');
-modelToEndpointMap.set('images', '/images/search?limit=30&');
+modelToEndpointMap.set('images', '/images/search?limit=10&');
+//modelToEndpointMap.set('images', '/images/search/');
 modelToEndpointMap.set("breeds", "/breeds?");
 
 const apiUrl = "https://api.thedogapi.com/v1";
-const apiKey =
-  "apikeyAuth";
+const apiKey = "live_5336NE1O8Y3ZfHlqaGhy3LYj7sETbq48jvWNCBKxgaU8iGy2zJNOq5xq7tVFHXFL";
 
 let currentModel = "images";
 const currentDataArray = [];
@@ -64,9 +64,7 @@ const generatePageElements = (model) => {
   // add Loading element/spinner
   showLoadingSpinner(container);
   // fetch data
-  const requestUrl = `${apiUrl}${modelToEndpointMap.get(
-    model
-  )}api_key=${apiKey}`;
+  const requestUrl = `${apiUrl}${modelToEndpointMap.get(model)}api_key=${apiKey}`;
   fetchData(requestUrl, model, container);
 }
 
@@ -82,10 +80,10 @@ async function fetchData(url, model, container) {
       return response.json();
     })
     .then((data) => {
-      //console.log("data  ", data);
+      console.log("data  ", data);
 
       data.forEach((el) => {
-        //console.log("el =====> ", el);
+        console.log("el =====> ", el);
         appendDataToArray(el, model)
       });
       // create html elements and append them to the section container
@@ -222,7 +220,7 @@ const createDataCard = (data, model) => {
 }
 //
 const API_URL = `https://api.thedogapi.com/v1`;
-const API_KEY = "apikeyAuth";
+const API_KEY = "live_5336NE1O8Y3ZfHlqaGhy3LYj7sETbq48jvWNCBKxgaU8iGy2zJNOq5xq7tVFHXFL";
 
 let currentImageToVoteOn;
 
